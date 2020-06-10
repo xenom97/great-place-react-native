@@ -10,6 +10,9 @@ import HeaderButton from '../components/HeaderButton';
 const defaultNavOptions = {
   headerStyle: {
     backgroundColor: Platform.OS === 'android' ? Colors.primary : '',
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    height: 80,
   },
   headerTitleStyle: {
     fontFamily: 'open-sans-bold',

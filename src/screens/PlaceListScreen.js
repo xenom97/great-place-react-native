@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {StyleSheet, FlatList} from 'react-native';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import PlaceItem from '../components/PlaceItem';
+import * as placeActions from '../store/places-actions';
 
 const PlaceListScreen = props => {
   const places = useSelector(state => state.places.places);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(placeActions.loadPlaces());
+  }, [dispatch]);
 
   return (
     <FlatList

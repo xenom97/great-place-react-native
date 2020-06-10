@@ -18,8 +18,8 @@ const PlaceItem = props => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 15,
-    paddingHorizontal: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: Colors.secondary,
