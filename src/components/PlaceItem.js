@@ -18,12 +18,15 @@ const PlaceItem = props => {
 
 const styles = StyleSheet.create({
   container: {
-    borderBottomColor: '#ccc',
-    borderBottomWidth: 1,
     paddingVertical: 15,
-    paddingHorizontal: 30,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: Colors.secondary,
+    borderRadius: 10,
+    marginTop: 10,
+    marginHorizontal: 8,
+    elevation: 5,
   },
   imageContainer: {
     borderRadius: 10,

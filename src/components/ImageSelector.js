@@ -24,7 +24,7 @@ const ImageSelector = props => {
         setImage();
       } else {
         setImage(response.uri);
-        props.onImageTaken(response.uri);
+        props.onImageTaken(response);
       }
     });
   };
@@ -32,6 +32,7 @@ const ImageSelector = props => {
   const resetImageHandler = () => {
     setImage();
     setError('No image picked yet.');
+    props.onImageTaken();
   };
 
   return (
@@ -58,7 +59,7 @@ const ImageSelector = props => {
         <TouchableOpacity
           onPress={resetImageHandler}
           style={{
-            backgroundColor: 'red',
+            backgroundColor: Colors.danger,
             borderRadius: 10,
             padding: 10,
             elevation: 3,

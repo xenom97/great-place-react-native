@@ -14,19 +14,12 @@ import ImageSelector from '../components/ImageSelector';
 
 const NewPlaceScreen = props => {
   const [title, setTitle] = useState('');
-  const [disabled, setDisabled] = useState(true);
   const [image, setImage] = useState();
 
   const dispatch = useDispatch();
 
   const titleChangeHandler = text => {
     setTitle(text);
-
-    if (text.length > 5) {
-      setDisabled(false);
-    } else {
-      setDisabled(true);
-    }
   };
 
   const savePlaceHandler = () => {
@@ -50,7 +43,7 @@ const NewPlaceScreen = props => {
         <Button
           title="Save Place"
           color={Colors.primary}
-          disabled={disabled}
+          disabled={!(title.length > 5 && image)}
           onPress={savePlaceHandler}
         />
       </View>
